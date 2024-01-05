@@ -20,7 +20,7 @@ public class Main {
 
   public static void main(final String[] args) {
 
-    final String schema = "BOOKS";
+    final String schema = "DEVELOP";
     final String tableName = "TEST240104";
     final LimitOptionsBuilder limitOptionsBuilder =
         LimitOptionsBuilder.builder()

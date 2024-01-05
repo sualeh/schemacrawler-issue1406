@@ -1,3 +1,21 @@
 # SchemaCrawler - Issue 1406
 
 [SchemaCrawler - Issue 1406](https://github.com/schemacrawler/SchemaCrawler/issues/1406)
+
+## Setup Oracle Database
+
+1. Create a schema called "DEVELOP"
+2. Create a table with constraints
+
+```sql
+CREATE TABLE DEVELOP.TEST240104
+   (ID NUMBER, 
+	INFO_NAME CHAR(10), 
+	PROC_NAME VARCHAR2(100), 
+	REG VARCHAR2(1000) NOT null,
+	 PRIMARY KEY (ID)
+	 );
+CREATE INDEX PROC_NAME_INDEX ON DEVELOP.TEST240104(PROC_NAME);
+CREATE INDEX INFO_NAME_INDEX ON DEVELOP.TEST240104(INFO_NAME);
+ALTER TABLE DEVELOP.TEST240104 ADD CONSTRAINT PROC_NAME_CONSTRAINT UNIQUE (PROC_NAME);
+```
